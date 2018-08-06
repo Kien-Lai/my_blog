@@ -1,0 +1,41 @@
+.list-article {
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%; 
+}
+
+.list-article p {
+    margin-left: 0px;
+    margin-right: 0px; 
+}
+
+.article {
+    margin-top: 10%; 
+}
+
+.public-article {
+    font-size: 0.9em;
+}
+
+.title-article:hover {
+    cursor: pointer;
+}
+
+.hashtag {
+    display: inline-block;
+    color: rgb(9, 0, 128);
+    margin-right: 1%; 
+}
+
+.hashtag:hover {
+    cursor: pointer;
+}
+
+.read-more {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.read-more:hover {
+    cursor: pointer;
+}
