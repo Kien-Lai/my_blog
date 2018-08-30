@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../font/Nunito-Regular.ttf');
+}
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+.nav {
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 10%;
+    transition: background-color 1s;
+    color: white;
+}
+
+.menu-nav {
+    list-style-type: none;
+}
+
+.menu-nav-item {
+    position: relative;
+    float: right;
+    display: block;
+    width: 15%;
+    height: 100%;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.menu-nav-item:hover {
+    cursor: pointer;
+    color:black;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
+
+.menu-nav-logo {
+    position: relative;
+    float: left;
+    display: block;
+    width: 15%;
+    height: 100%;
+    font-size: 2em;
+    font-weight: 1000;
+}
+
+.menu-nav-logo:hover {
+    cursor: pointer;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(67, 151, 230);
+    background-size: 100% 100%;
+}
+
+.blur-panel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0.5;
+    background-color: rgba(0, 0, 0, 0.75);;
+    opacity: 0.6;
+
+}
+
+.sologan {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+.sologan h2, h1, p {
+    margin: 2%;
+}
+
+.sologan h1 {
+    font-size: 2.5em;
+    font-weight: 1000;
+}
+
+.nav-scroll {
+    background-color: white;
+    color: rgb(67, 151, 230);
+    box-shadow: 2px 2px 5px rgb(160, 158, 158);
+}
