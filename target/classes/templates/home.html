@@ -1,49 +1,25 @@
-<html>
-    <head>
-        <title>Jin</title>
-        <link rel="shortcut icon" href="/images/logo.ico">
-        <link rel="stylesheet" href="/css/general.css">
-        <link rel="stylesheet" href="/css/article.css">
-        <link rel="stylesheet" href="/css/index.css">
-        <link rel="stylesheet" href="/css/footer.css">
-    </head>
-    <body>
-        <div th:fragment="header">
-            <div class="nav">
-                <ul class="menu-nav">
-                    <li class="menu-nav-logo"><div class="center-text">JIN</div></li>
-                    <li class="menu-nav-item"><div class="center-text">About</div></li>
-                    <li class="menu-nav-item"><div class="center-text">Catalogue</div></li>
-                    <li class="menu-nav-item"><div class="center-text"><a href="/home">Home</a></div></li>
-                </ul>
-            </div>
-            <div class="background">
-                <div class="blur-panel"></div>
-                <div class="sologan">
-                    <h2>Welcome</h2>
-                    <h1>I 'M A Programmer.|</h1>
-                    <p>I love coding and i desire to be a good software engineer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="list-article">
-            <div class="article">
-                <h2 class="title-article">Javascript</h2>
-                <p class="sumary-article">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p class="public-article">20-01-1996 by Jin</p>
-                <div class="hashtag">#javascript</div>
-                <div class="hashtag">#java</div>
-            </div>
-            <div class="article">
-                <h2 class="title-article">Javascript</h2>
-                <p class="sumary-article">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p class="public-article">20-01-1996 by Jin</p>
-                <div class="hashtag">#javascript</div>
-                <div class="hashtag">#java</div>
-            </div>
-            <div class="read-more">Read more...</div>
-        </div>
-        <div th:replace="~{layout/footer :: footer}">...</div>
-        <script src="./js/nav.js"></script>
-    </body>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Jin</title>
+    <link rel="shortcut icon" href="/images/logo.ico">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/article.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+<div th:insert="/layout/header :: header_for_homepage"></div>
+<div class="list-article" th:each="post : ${posts}">
+    <div class="article">
+        <h2 class="title-article" th:text="${post.title}"></h2>
+        <p class="sumary-article" th:text="${post.shortDescription}"></p>
+        <p class="public-article" th:text="${post.createdAt + ' created by ' + post.author.nickname}"></p>
+        <div class="hashtag">#javascript</div>
+        <div class="hashtag">#java</div>
+    </div>
+</div>
+<div class="read-more">Read more...</div>
+<div th:replace="~{layout/footer :: footer}">...</div>
+<script src="./js/nav.js"></script>
+</body>
 </html>

@@ -1,0 +1,85 @@
+package myblog.model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "post")
+public class Post {
+
+    @Id
+    @Column(name = "post_id")
+    private String postId;
+
+    private String title;
+
+    @Column(name = "short_description")
+    private String shortDescription;
+
+    private String content;
+
+    @Column(name = "created_at")
+    private String createdAt;
+
+    @Column(name = "author_id")
+    private String authorId;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id", insertable = false, updatable = false)
+    Author author;
+
+    public String getPostId() {
+        return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(String authorId) {
+        this.authorId = authorId;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+}

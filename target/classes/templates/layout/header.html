@@ -1,15 +1,28 @@
-<html>
-    <header>
-    </header>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+    </head>
     <body>
-        <div th:fragment="header">
+        <!--header for homepage-->
+        <div th:fragment="header_for_homepage">
             <div class="nav">
                 <ul class="menu-nav">
-                    <li class="menu-nav-logo"><div class="center-text">JIN</div></li>
-                    <li class="menu-nav-item"><div class="center-text">Contact</div</li>
-                    <li class="menu-nav-item"><div class="center-text">Catalogue</div</li>
-                    <li class="menu-nav-item"><div class="center-text">About</div</li>
-                    <li class="menu-nav-item"><div class="center-text">Home</div></li>
+                    <li class="menu-nav-logo">
+                        <div class="center-text">
+                            <a href="/">JIN</a>
+                        </div>
+                    </li>
+                    <li class="menu-nav-item">
+                        <div class="center-text">About</div>
+                    </li>
+                    <li class="menu-nav-item">
+                        <div class="center-text">Catalogue</div>
+                    </li>
+                    <li class="menu-nav-item">
+                        <div class="center-text">
+                            <a href="/">Home</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="background">
@@ -21,5 +34,27 @@
                 </div>
             </div>
         </div>
+        <!-- header for post-->
+        <div class="nav" th:fragment="header_for_post">
+            <ul class="menu-nav">
+                <li class="menu-nav-logo">
+                    <div class="center-text">
+                        <a href="/">JIN</a>
+                    </div>
+                </li>
+                <li class="menu-nav-item">
+                    <div class="center-text">About</div>
+                </li>
+                <li class="menu-nav-item">
+                    <div class="center-text">Catalogue</div>
+                </li>
+                <li class="menu-nav-item">
+                    <div class="center-text">
+                        <a href="/">Home</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
     </body>
 </html>
