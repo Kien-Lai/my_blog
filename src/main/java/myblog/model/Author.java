@@ -1,9 +1,7 @@
 package myblog.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "author")
@@ -18,6 +16,10 @@ public class Author {
     private String fullname;
 
     private String description;
+
+    @ManyToMany
+    @JoinColumn(name = "auth_id", insertable = false, updatable = false)
+    List<PostCategory> lstPostCatalogue;
 
     public String getAuthorId() {
         return authorId;
@@ -49,5 +51,13 @@ public class Author {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<PostCategory> getLstPostCatalogue() {
+        return lstPostCatalogue;
+    }
+
+    public void setLstPostCatalogue(List<PostCategory> lstPostCatalogue) {
+        this.lstPostCatalogue = lstPostCatalogue;
     }
 }

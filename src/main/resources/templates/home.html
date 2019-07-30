@@ -14,8 +14,9 @@
         <h2 class="title-article" th:text="${post.title}"></h2>
         <p class="sumary-article" th:text="${post.shortDescription}"></p>
         <p class="public-article" th:text="${post.createdAt + ' created by ' + post.author.nickname}"></p>
-        <div class="hashtag">#javascript</div>
-        <div class="hashtag">#java</div>
+        <div th:each="tag : ${post.lstPostCategory}">
+            <a class="hashtag" th:text="'#' + ${tag.categoryId}" th:href="@{'/category/' + ${tag.categoryId}}"></a>
+        </div>
     </div>
 </div>
 <div class="read-more">Read more...</div>

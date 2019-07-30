@@ -1,6 +1,7 @@
 package myblog.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "post")
@@ -26,6 +27,10 @@ public class Post {
     @ManyToOne
     @JoinColumn(name = "author_id", insertable = false, updatable = false)
     Author author;
+
+    @OneToMany
+    @JoinColumn(name = "post_id", insertable = false, updatable = false)
+    List<PostCategory> lstPostCategory;
 
     public String getPostId() {
         return postId;
@@ -81,5 +86,13 @@ public class Post {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public List<PostCategory> getLstPostCategory() {
+        return lstPostCategory;
+    }
+
+    public void setLstPostCategory(List<PostCategory> lstPostCategory) {
+        this.lstPostCategory = lstPostCategory;
     }
 }
