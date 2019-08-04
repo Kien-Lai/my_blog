@@ -17,9 +17,9 @@ public class Author {
 
     private String description;
 
-    @ManyToMany
+    @OneToMany
     @JoinColumn(name = "auth_id", insertable = false, updatable = false)
-    List<PostCategory> lstPostCatalogue;
+    List<Post> lstPost;
 
     public String getAuthorId() {
         return authorId;
@@ -53,11 +53,11 @@ public class Author {
         this.description = description;
     }
 
-    public List<PostCategory> getLstPostCatalogue() {
-        return lstPostCatalogue;
+    public List<Post> getLstPost() {
+        return lstPost;
     }
 
-    public void setLstPostCatalogue(List<PostCategory> lstPostCatalogue) {
-        this.lstPostCatalogue = lstPostCatalogue;
+    public void setLstPost(List<Post> lstPost) {
+        this.lstPost = lstPost;
     }
 }

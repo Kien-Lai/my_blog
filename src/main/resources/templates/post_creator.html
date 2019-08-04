@@ -1,0 +1,76 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jin</title>
+    <link rel="shortcut icon" href="/images/logo.ico">
+    <link rel="stylesheet" href="/css/post_creator.css">
+</head>
+<body>
+    <h3>Trang tạo bài viết mới</h3>
+    <div id="input">
+        <textarea placeholder="Nhập mã markdown ở đây" id="input-markdown"></textarea>
+        <div id="input-category-auth">
+            <input type="text" placeholder="Nhập url ảnh cover" id="input-background-url">
+            <input type="text" placeholder="Nhập postId" id="input-postId">
+            <input type="text" placeholder="Nhập title bài viết ở đây" id="input-title">
+            <textarea placeholder="Nhập short description tại đây" id="input-shortdescription"></textarea>
+            <select id="input-auth">
+                <option th:each="author : ${lstAuthor}" th:value="${author.authorId}" th:text="${author.nickname}"></option>
+            </select>
+            <select multiple id="input-category">
+                <option th:each = "category : ${lstCategory}" th:value="${category.categoryId}" th:text="${category.categoryId}"></option>
+            </select>
+        </div>
+    </div>
+    <div id="preview">
+        <h3>Preview</h3>
+        <button onclick="showPreview()">Xem preview</button>
+        <button onclick="submit()">Submit</button>
+        <div id="show-preview"></div>
+    </div>
+    <script>
+        function showPreview() {
+            let markdownContent = document.getElementById("input-markdown").value;
+            document.getElementById("show-preview").innerHTML = markdownContent;
+        }
+
+        function submit() {
+            // get data from fields
+            let title =document.getElementById("input-title").value;
+            let postId = document.getElementById("input-postId").value;
+            let backgroundUrl = document.getElementById("input-background-url").value;
+            let shortDescription = document.getElementById("input-shortdescription").value;
+            let authorId = document.getElementById("input-auth").value;
+            let categories = document.getElementById("input-category").options;
+            let categoryId = [];
+            for(let i=0; i<categories.length; i++){
+                if(categories[i].selected) categoryId.push(categories[i].value);
+            }
+            let content = document.getElementById("input-markdown").value;
+
+            // call api to save post
+            let formData = new FormData();
+            formData.append("title", title);
+            formData.append("postId", postId);
+            formData.append("backgroundUrl", backgroundUrl);
+            formData.append("shortDescription", shortDescription);
+            formData.append("content", content);
+            formData.append("authorId", authorId);
+            formData.append("categoryId", categoryId);
+
+            let request = new XMLHttpRequest();
+            request.open("POST","/api/v1/post");
+            request.onload = function(event){
+                if(request.status == 200){
+                    alert("Save successfully");
+                } else{
+                    alert("Save failed, please try again");
+                }
+            }
+            request.send(formData);
+
+        }
+    </script>
+</body>
+</html>

@@ -2,18 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ab67fd1-d244-4e78-8a59-a7040bd9ae78" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/model/PostCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/model/PostCategoryId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/controller/PostCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/controller/restApi/SaveNewPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/model/restEntity/CommonResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/modelRepository/AuthorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/modelRepository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myblog/modelRepository/PostCategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/post_creator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/post_creator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myblog/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myblog/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myblog/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myblog/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myblog/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myblog/model/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myblog/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myblog/model/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myblog/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myblog/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myblog/modelRepository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myblog/modelRepository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/reading_page_body.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/reading_page_body.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myblog/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myblog/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myblog/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myblog/controller/ArticleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/myblog/model/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myblog/model/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myblog/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myblog/model/Category.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/myblog/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myblog/model/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myblog/modelRepository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myblog/modelRepository/PostRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/article.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +58,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -67,6 +84,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535647524809" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -156,7 +174,14 @@
       <workItem from="1564291836938" duration="12775000" />
       <workItem from="1564333971692" duration="364000" />
       <workItem from="1564334473941" duration="352000" />
-      <workItem from="1564408461445" duration="7057000" />
+      <workItem from="1564408461445" duration="7165000" />
+      <workItem from="1564643652371" duration="6535000" />
+      <workItem from="1564720454297" duration="78000" />
+      <workItem from="1564720535426" duration="11986000" />
+      <workItem from="1564807755445" duration="93000" />
+      <workItem from="1564807853406" duration="7971000" />
+      <workItem from="1564893544753" duration="4754000" />
+      <workItem from="1564929829533" duration="8904000" />
     </task>
     <servers />
   </component>
@@ -189,12 +214,36 @@
           <line>35</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/myblog/controller/ArticleController.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/myblog/controller/ArticleController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/myblog/controller/PostCreator.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/myblog/controller/restApi/SaveNewPost.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/myblog/controller/restApi/SaveNewPost.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="lstPost.getContent().get(0).getAuthor()" language="JAVA" />
-        <watch expression="lstPost.content" language="JAVA" />
+        <watch expression="request" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

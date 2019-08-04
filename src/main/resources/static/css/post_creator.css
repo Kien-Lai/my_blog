@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../font/Nunito-Regular.ttf');
+}
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+#input {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 80vh;
+}
+
+#input-markdown {
+    flex: 3;
+}
+
+#input-category-auth {
+    flex: 1;
+    border: 1px solid black;
+}
+
+#input-background-url , #input-title, #input-shortdescription{
+    width: 100%;
+}
+
+#input-auth {
+    width: 100%;
+}
+
+#input-category {
+    width: 100%;
+}
+
+#show-preview {
+    width: 100vw;
+    border: 1px solid black;
+}
+

@@ -11,7 +11,7 @@
 <div th:insert="/layout/header :: header_for_homepage"></div>
 <div class="list-article" th:each="post : ${posts}">
     <div class="article">
-        <h2 class="title-article" th:text="${post.title}"></h2>
+        <a th:href="'posts/' + ${post.postId}"><h2 class="title-article" th:text="${post.title}"></h2></a>
         <p class="sumary-article" th:text="${post.shortDescription}"></p>
         <p class="public-article" th:text="${post.createdAt + ' created by ' + post.author.nickname}"></p>
         <div th:each="tag : ${post.lstPostCategory}">

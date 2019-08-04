@@ -24,6 +24,9 @@ public class Post {
     @Column(name = "author_id")
     private String authorId;
 
+    @Column(name = "background_url")
+    private String backgroundUrl;
+
     @ManyToOne
     @JoinColumn(name = "author_id", insertable = false, updatable = false)
     Author author;
@@ -94,5 +97,13 @@ public class Post {
 
     public void setLstPostCategory(List<PostCategory> lstPostCategory) {
         this.lstPostCategory = lstPostCategory;
+    }
+
+    public String getBackgroundUrl() {
+        return backgroundUrl;
+    }
+
+    public void setBackgroundUrl(String backgroundUrl) {
+        this.backgroundUrl = backgroundUrl;
     }
 }
